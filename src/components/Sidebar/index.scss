@@ -89,4 +89,10 @@ nav {
             content: "CONTACT";
         }
     }
+    // the page you are on, the navbar icon appropriate one will be highlighted as yellow
+    a.active {
+        svg {
+            color: #ffd700;
+        }
+    }
 }
