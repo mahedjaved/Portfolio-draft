@@ -3,7 +3,14 @@ import './index.scss'
 import LogoS from '../../assets/images/logo-s.png'
 import LogoSubtitle from '../../assets/images/logo_sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
+import {
+  faBlackboard,
+  faBook,
+  faEnvelope,
+  faHome,
+  faNewspaper,
+  faUser,
+} from '@fortawesome/free-solid-svg-icons'
 import {
   faGithub,
   faLinkedin,
@@ -25,7 +32,7 @@ const Sidebar = () => (
         <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
       </NavLink>
 
-      {/* object 2 */}
+      {/* object 2 : About Me*/}
       <NavLink
         exact="false"
         activeclassname="active"
@@ -35,7 +42,7 @@ const Sidebar = () => (
         <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
       </NavLink>
 
-      {/* object 3 */}
+      {/* object 3 : Contact Me */}
       <NavLink
         exact="false"
         activeclassname="active"
@@ -43,6 +50,36 @@ const Sidebar = () => (
         to="/contact"
       >
         <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
+      </NavLink>
+
+      {/* object 4 : Publications*/}
+      <NavLink
+        exact="false"
+        activeclassname="active"
+        className="publications-link"
+        to="/publications"
+      >
+        <FontAwesomeIcon icon={faBook} color="#4d4d4e" />
+      </NavLink>
+
+      {/* object 5 : Projects*/}
+      <NavLink
+        exact="false"
+        activeclassname="active"
+        className="projects-link"
+        to="/projects"
+      >
+        <FontAwesomeIcon icon={faBlackboard} color="#4d4d4e" />
+      </NavLink>
+
+      {/* object 5 : Blogs*/}
+      <NavLink
+        exact="false"
+        activeclassname="active"
+        className="blogs-link"
+        to="/blogs"
+      >
+        <FontAwesomeIcon icon={faNewspaper} color="#4d4d4e" />
       </NavLink>
     </nav>
 

@@ -89,6 +89,21 @@ nav {
             content: "CONTACT";
         }
     }
+    a.publications-link {
+        &:after {
+            content: "PUBLICATIONS";
+        }
+    }
+    a.projects-link {
+        &:after {
+            content: "PROJECTS";
+        }
+    }
+    a.blogs-link {
+        &:after {
+            content: "BLOGS";
+        }
+    }
     // the page you are on, the navbar icon appropriate one will be highlighted as yellow
     a.active {
         svg {
