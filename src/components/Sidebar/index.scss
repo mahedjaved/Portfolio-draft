@@ -13,19 +13,17 @@
     // padding 0 since left and right will have no padding
     padding: 8px 0;
 
-    img{
+    img {
         display: block;
         margin: 8px auto;
         width: 24px;
         height: auto;
 
-        &.sub-logo{
+        &.sub-logo {
             width: 50px;
         }
     }
-
 }
-
 
 // for ensuring the logos on sidebar are organised in a nav bar format, as in vertical, this will STYLE the <nav> components
 nav {
@@ -48,6 +46,47 @@ nav {
         text-decoration: none;
 
         // add addittional TRANSITIONS to our links
-        // i 
+        i {
+            transition: all 0.3s ease-out;
+        }
+
+        &:hover {
+            color: #ffd700;
+            svg {
+                opacity: 0;
+            }
+
+            // now once those are highlighted conver them into text
+            &:after {
+                opacity: 1;
+            }
+        }
+        &:after {
+            content: "";
+            font-size: 9px;
+            letter-spacing: 2px;
+            position: absolute;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            transition: all 0.3s ease-out;
+        }
+        &:first-child {
+            &::after {
+                content: "HOME";
+            }
+        }
+    }
+    a.about-link {
+        &:after {
+            content: "ABOUT";
+        }
+    }
+    a.contact-link {
+        &:after {
+            content: "CONTACT";
+        }
     }
 }
