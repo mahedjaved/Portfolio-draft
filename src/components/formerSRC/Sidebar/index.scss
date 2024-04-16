@@ -1,0 +1,138 @@
+.nav-bar {
+    background: #181818;
+    width: 60px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    min-height: 500px;
+}
+
+.logo {
+    display: block;
+    // padding 0 since left and right will have no padding
+    padding: 8px 0;
+
+    img {
+        display: block;
+        margin: 8px auto;
+        width: 24px;
+        height: auto;
+
+        &.sub-logo {
+            width: 50px;
+        }
+    }
+}
+
+// for ensuring the logos on sidebar are organised in a nav bar format, as in vertical, this will STYLE the <nav> components
+nav {
+    display: block;
+    text-align: center;
+    position: absolute;
+    height: 210px;
+    top: 50%;
+    margin-top: -120px;
+    width: 100%;
+
+    // format the links
+    a {
+        font-size: 22px;
+        color: #4d4d4e;
+        display: block;
+        line-height: 51px;
+        height: 51px;
+        position: relative;
+        text-decoration: none;
+
+        // add addittional TRANSITIONS to our links
+        i {
+            transition: all 0.3s ease-out;
+        }
+
+        &:hover {
+            color: #ffd700;
+            svg {
+                opacity: 0;
+            }
+
+            // now once those are highlighted conver them into text
+            &:after {
+                opacity: 1;
+            }
+        }
+        &:after {
+            content: "";
+            font-size: 9px;
+            letter-spacing: 2px;
+            position: absolute;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            transition: all 0.3s ease-out;
+        }
+        &:first-child {
+            &::after {
+                content: "HOME";
+            }
+        }
+    }
+    a.about-link {
+        &:after {
+            content: "ABOUT";
+        }
+    }
+    a.contact-link {
+        &:after {
+            content: "CONTACT";
+        }
+    }
+    a.publications-link {
+        &:after {
+            content: "PUBLICATIONS";
+        }
+    }
+    a.projects-link {
+        &:after {
+            content: "PROJECTS";
+        }
+    }
+    a.blogs-link {
+        &:after {
+            content: "BLOGS";
+        }
+    }
+    // the page you are on, the navbar icon appropriate one will be highlighted as yellow
+    a.active {
+        svg {
+            color: #ffd700;
+        }
+    }
+}
+
+ul {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: block;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+
+    li {
+        a {
+            padding: 7px 0;
+            display: block;
+            font-size: 15px;
+            line-height: 16px;
+
+            // ensure when we hover over our links they should turn yellow
+            &:hover svg {
+                color: #ffd700;
+            }
+        }
+    }
+}
