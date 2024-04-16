@@ -19,7 +19,7 @@ const Home = () => {
           {/* a h2 title for what I do*/}
           <h2>
             Doctoral graduate in deep learning for computer vision / a tech
-            hobbyist / an aspiring mathematician
+            hobbyist / an aspiring AI developer
           </h2>
 
           {/* Link to contacts page */}
